@@ -1,1 +1,1 @@
-Skyblock ChatTriggers Module
+Skyblock ChatTriggers Module for various uses.
