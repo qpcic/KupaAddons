@@ -16,6 +16,77 @@
 		jyrre_time_display = true
 		equipment_display = false
 
+[combat]
+
+	[combat.slayer]
+		announce_boss_chat = 0
+		boss_highlight = false
+		miniboss_highlight = false
+		slayer_spawn_warning = 0
+		announce_miniboss_chat = 0
+
+	[combat.bestiary]
+		bestiary_counters = 0
+		kill_counter = false
+		bestiary_gui = false
+
+	[combat.combat]
+		mana_drain_range = false
+		combo_display = false
+		low_health_alert = 0.0
+		damage_tracer = 0
+		ragnarok_detection = true
+
+[crimson_crafts]
+
+	[crimson_crafts.fishing]
+		golden_fish_timer = false
+		announce_mythic_creature_spawn = 0
+		detect_mythic_lava_creature = false
+
+[economy]
+
+	[economy.economy]
+		bits_alert = 0
+		coin_tracker = 0
+
+	[economy.pricing]
+		trade_value = false
+		container_value = 0
+		item_price = 0
+		price_type = 0
+		single_attribute = true
+
+[mining]
+
+	[mining.jinx]
+		powder_chest_detect = 0
+		powder_chest_hider = 0
+		powder_tracker = 0
+
+	[mining.mining]
+		wishing_compass_locator = false
+		pick_display = false
+
+	[mining.shaft]
+		shaft_transfer = false
+		corpse_announce = false
+		corpse_waypoints = false
+		commission_waypoints = 0
+		commission_announce = false
+		commissions_display = false
+		fossil_helper = false
+
+[dungeon]
+
+	[dungeon.star_detect]
+		star_mob_highlight = 0
+		star_highlight_color = "255,0,255,0"
+
+	[dungeon.chests]
+		dungeon_profit = false
+		croesus_highlight = false
+
 [rift]
 
 	[rift.rift]
@@ -54,6 +125,9 @@
 		reminder_text = ""
 		reminder_time = 0
 		item_cooldown_alert = false
+
+	[general.basics]
+		kupaaddons_toggle = true
 
 	[general.webhook]
 		discord_webhook = ""
@@ -117,60 +191,6 @@
 		composter_display = 0
 		garden_plot_box = false
 
-[combat]
-
-	[combat.slayer]
-		announce_boss_chat = 0
-		boss_highlight = false
-		miniboss_highlight = false
-		slayer_spawn_warning = 0
-		announce_miniboss_chat = 0
-
-	[combat.bestiary]
-		bestiary_counters = 0
-		kill_counter = false
-		bestiary_gui = false
-
-	[combat.combat]
-		mana_drain_range = false
-		combo_display = false
-		low_health_alert = 0.0
-		damage_tracer = 0
-		ragnarok_detection = true
-
-[economy]
-
-	[economy.economy]
-		bits_alert = 0
-		coin_tracker = 0
-
-	[economy.pricing]
-		trade_value = false
-		container_value = 0
-		item_price = 0
-		price_type = 0
-		single_attribute = true
-
-[mining]
-
-	[mining.jinx]
-		powder_chest_detect = 0
-		powder_chest_hider = 0
-		powder_tracker = 0
-
-	[mining.mining]
-		wishing_compass_locator = false
-		pick_display = false
-
-	[mining.shaft]
-		shaft_transfer = false
-		corpse_announce = false
-		corpse_waypoints = false
-		commission_waypoints = 0
-		commission_announce = false
-		commissions_display = false
-		fossil_helper = false
-
 [event]
 
 	[event.chocolate_factory]
@@ -216,14 +236,4 @@
 		server_kick_announce = ""
 		auto_join_reparty = false
 		whitelist_rejoin = true
-
-[dungeon]
-
-	[dungeon.star_detect]
-		star_mob_highlight = 0
-		star_highlight_color = "255,0,255,0"
-
-	[dungeon.chests]
-		dungeon_profit = false
-		croesus_highlight = false
 
