@@ -27,17 +27,8 @@ import {
     getCategoryComparator: () => (a, b) => {
         const categories = [
             "General",
-            "Container",
+            "Crimson Crafts",
             "Party",
-            "Economy",
-            "Combat",
-            "Mining",
-            "Farming",
-            "Event",
-            "Crimson Isles",
-            "Dungeon",
-            "Kuudra",
-            "Rift",
         ];
         return categories.indexOf(a.name) - categories.indexOf(b.name);
     },
