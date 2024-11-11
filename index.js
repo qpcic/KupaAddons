@@ -61,8 +61,8 @@ register("command", (...args) => {
                 getStat(command);  // Call the function to get stats based on the command
             } else {
                 // Inform user of unknown command
-                ChatLib.chat(`${LOGO + RED}Unknown command: "${command}" was not found!`);
-                ChatLib.chat(`${LOGO + RED}Use '/ka help' for a full list of commands.`);
+                ChatLib.chat(`${LOGO + RED} Unknown command: "${command}" was not found!`);
+                ChatLib.chat(`${LOGO + RED} Use '/ka help' for a full list of commands.`);
             }
             break;
     }
