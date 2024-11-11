@@ -3,5 +3,6 @@
   "creator": "Qpcic",
   "description": "Random utilities!",
   "version": "0.0.1",
-  "entry": "index.js"
+  "entry": "index.js",
+  "requires": ["Vigilance"]
 }

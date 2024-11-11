@@ -1,0 +1,229 @@
+
+[container]
+
+	[container.container]
+		searchbar = false
+		auction_highlight = false
+		container_preview_ = 0
+		slot_binding = true
+		container_buttons_ = 0
+		wardrobe_hotkey = true
+
+	[container.items]
+		attribute_abbreviation = false
+		armor_display = false
+		max_supercraft = true
+		jyrre_time_display = true
+		equipment_display = false
+
+[rift]
+
+	[rift.rift]
+		ddr_helper = false
+		enigma_soul_waypoints = 0
+		montezuma_soul_waypoints = false
+
+	[rift.vampire]
+		announce_mania_phase = 0
+		vampire_attack_display = false
+		effigy_waypoint = true
+		vampire_hitbox = false
+		enlarge_impel_message = false
+
+[general]
+
+	[general.general]
+		render_waypoint = 0
+		widget_display = true
+		remove_selfie_mode = false
+		skyblock_xp_alert = true
+		skill_tracker = 0
+		text_shadow_toggle = true
+
+	[general.server]
+		fairy_soul_waypoints = 0
+		hide_on_bush = ""
+		server_status = false
+		server_alert = true
+		skyblock_stats_display = false
+		hide_close_players = 0
+		hide_all_particles = false
+		hide_far_entities = 0
+
+	[general.timer]
+		reminder_text = ""
+		reminder_time = 0
+		item_cooldown_alert = false
+
+	[general.webhook]
+		discord_webhook = ""
+
+	[general.yapping]
+		custom_emotes = false
+		autocorrect_command = false
+		bridge_formatter = false
+		autocomplete_command = false
+
+	[general.essential]
+		kupaaddons_toggle = true
+		socket_toggle = true
+		skyblock_toggle = true
+
+[crimson_isles]
+
+	[crimson_isles.fishing]
+		golden_fish_timer = false
+		announce_mythic_creature_spawn = 0
+		detect_mythic_lava_creature = false
+		trophy_fish_overlay = false
+
+	[crimson_isles.vanquisher]
+		vanquisher_auto-warp = ""
+		vanquisher_detection = false
+		announce_vanquisher_chat = 0
+		vanquisher_counter = 0
+
+[kuudra]
+
+	[kuudra.kuudra]
+		kuudra_hp_display = false
+		show_crate_waypoints = false
+		show_supply_piles = false
+		kuudra_spawn = false
+		"auto_'/kv'_pf" = false
+		crate_edit = false
+		kuudra_splits = false
+
+	[kuudra.kuudra_profit]
+		kuudra_profit_tracker = 0
+		kuudra_profit = false
+		minimum_god_roll = 50
+		tabasco_enjoyer = true
+
+	[kuudra.kuudra_alert]
+		kuudra_alerts = false
+
+[farming]
+
+	[farming.pests]
+		desk_highlight = false
+		pest_alert = false
+		infested_alert = 0
+		spray_display = false
+		pesthunter_display = false
+
+	[farming.garden]
+		garden_tab_display = false
+		composter_display = 0
+		garden_plot_box = false
+
+[combat]
+
+	[combat.slayer]
+		announce_boss_chat = 0
+		boss_highlight = false
+		miniboss_highlight = false
+		slayer_spawn_warning = 0
+		announce_miniboss_chat = 0
+
+	[combat.bestiary]
+		bestiary_counters = 0
+		kill_counter = false
+		bestiary_gui = false
+
+	[combat.combat]
+		mana_drain_range = false
+		combo_display = false
+		low_health_alert = 0.0
+		damage_tracer = 0
+		ragnarok_detection = true
+
+[economy]
+
+	[economy.economy]
+		bits_alert = 0
+		coin_tracker = 0
+
+	[economy.pricing]
+		trade_value = false
+		container_value = 0
+		item_price = 0
+		price_type = 0
+		single_attribute = true
+
+[mining]
+
+	[mining.jinx]
+		powder_chest_detect = 0
+		powder_chest_hider = 0
+		powder_tracker = 0
+
+	[mining.mining]
+		wishing_compass_locator = false
+		pick_display = false
+
+	[mining.shaft]
+		shaft_transfer = false
+		corpse_announce = false
+		corpse_waypoints = false
+		commission_waypoints = 0
+		commission_announce = false
+		commissions_display = false
+		fossil_helper = false
+
+[event]
+
+	[event.chocolate_factory]
+		egg_announce = 0
+		egg_timers = false
+		stray_alert = 0
+		chocolate_overlay = false
+		rabbit_highlight = 0
+		egg_waypoints = false
+
+	[event.inquisitor]
+		detect_inquisitor = false
+		announce_inquisitor_chat = 0
+		inquisitor_counter = 0
+
+	[event.mythological_ritual]
+		diana_warp = false
+		burrow_detection = 0
+		diana_waypoint = false
+
+	[event.skyblock]
+		bingo_card_overlay = 0
+		calendar_time = false
+
+	[event.great_spook]
+		primal_fear_alert = false
+		math_teacher_solver = false
+
+[party]
+
+	[party.message]
+		party_leader_only = false
+		party_join_message = ""
+		guild_join_message = ""
+
+	[party.party_commands]
+		party_chat_commands = false
+		leader_chat_commands = false
+
+	[party.party]
+		anti_ghost_party = false
+		auto_transfer = 0
+		server_kick_announce = ""
+		auto_join_reparty = false
+		whitelist_rejoin = true
+
+[dungeon]
+
+	[dungeon.star_detect]
+		star_mob_highlight = 0
+		star_highlight_color = "255,0,255,0"
+
+	[dungeon.chests]
+		dungeon_profit = false
+		croesus_highlight = false
+
