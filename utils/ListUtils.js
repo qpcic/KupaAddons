@@ -13,7 +13,9 @@ import {
     LOGO, DARK_PURPLE, LIGHT_PURPLE, WHITE, DARK_GRAY, YELLOW,
 } from "./Constants";
 import Settings from "./Settings";
-
+import { convertToTitleCase } from "./fun/format";
+import { convertToPascalCase } from "./fun/format";
+import { unformatNumber } from "./fun/format";
 
 /**
  * Prints a list of items to chat.
@@ -24,7 +26,7 @@ import Settings from "./Settings";
 
 
 export function printList(list, listName, action = true, command = "remove", hoverKey = false) {
-    ChatLib.clearChat(5858);
+    //ChatLib.clearChat(5858);
     const isArray = Array.isArray(list);
     const length = isArray ? list.length : Object.keys(list).length;
 
@@ -122,30 +124,30 @@ export function updateList(args, listName) {
         case "add": // ADD TO LIST
             if (isArray && !list.includes(item)) {
                 list.push(item);
-                ChatLib.chat(`${LOGO + GREEN}Successfully added "${WHITE + item + GREEN}" to the ${listName}!`);
+                ChatLib.chat(`${LOGO + GREEN} Successfully added "${WHITE + item + GREEN}" to the ${listName}!`);
             } else if (!isArray && !(key in list)) {
                 list[key] = value;
-                ChatLib.chat(`${LOGO + GREEN}Successfully linked "${WHITE + value + GREEN}" to [${WHITE + key + GREEN}]!`);
+                ChatLib.chat(`${LOGO + GREEN} Successfully linked "${WHITE + value + GREEN}" to [${WHITE + key + GREEN}]!`);
             } else ChatLib.chat(`${LOGO + RED}[${WHITE + (isArray ? item : key) + RED}] is already in the ${listName}!`);
             break;
         case "remove": // REMOVE FROM LIST
             if (isArray && list.indexOf(item) > -1) {
                 list.splice(list.indexOf(item), 1);
-                ChatLib.chat(`${LOGO + GREEN}Successfully removed "${WHITE + item + GREEN}" from the ${listName}!`);
+                ChatLib.chat(`${LOGO + GREEN} Successfully removed "${WHITE + item + GREEN}" from the ${listName}!`);
             } else if (!isArray && key in list) {
                 delete list[key];
-                ChatLib.chat(`${LOGO + GREEN}Successfully removed "${WHITE + key + GREEN}" from the ${listName}!`);
+                ChatLib.chat(`${LOGO + GREEN} Successfully removed "${WHITE + key + GREEN}" from the ${listName}!`);
             } else ChatLib.chat(`${LOGO + RED}[${WHITE + item + RED}] is not in the ${listName}!`);
             break;
         case "clear": // CLEAR LIST
             if (isArray) list.length = 0;
             else Object.keys(list).forEach((key) => delete list[key]);
-            ChatLib.chat(`${LOGO + GREEN}Successfully cleared the ${listName}!`);
+            ChatLib.chat(`${LOGO + GREEN} Successfully cleared the ${listName}!`);
             break;
         case "view": // DISPLAY LIST
         case "list":
             printList(list, listName, true);
-            return;
+            break;
         case "reset": // RESET LIST TO DEFAULT
             if (listName === "dianalist") data.dianalist = ["hub", "da", "castle", "museum", "wizard"];
             else if (listName === "attributelist")

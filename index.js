@@ -14,6 +14,7 @@ import {
 } from "./utils/Constants";
 import {DISCORD} from "./utils/Constants";
 import {updateList} from "./utils/ListUtils";
+import {printList} from "./utils/ListUtils";
 
 const KA = "[KupaAddons]";
 
