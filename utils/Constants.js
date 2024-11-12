@@ -24,5 +24,7 @@ export const UNDERLINE = "§n";
 export const ITALIC = "§o";
 export const RESET = "§r";
 
+export const HLOGO = `${LIGHT_PURPLE}${BOLD}KupaAddons`;
 export const LOGO = `${WHITE}[${LIGHT_PURPLE}KupaAddons${WHITE}]`;
-export const HEADER = `${LOGO} ${GRAY}v0.0.1 ${WHITE}Made By Qpcic`;
+export const VERS = `${DARK_PURPLE + ITALIC}${JSON.parse(FileLib.read("KupaAddons", "metadata.json")).version} ${GRAY + ITALIC}by Qpcic`;
+export const HEADER = `${WHITE}-=[ ${HLOGO} ${WHITE}]=-`;

@@ -37,6 +37,8 @@ register("command", (...args) => {
 
     // Switch logic based on the command
     switch (soleCommand) {
+        case "discord":
+            ChatLib.chat(`${LOGO} +`)
         case "setting":  // Handle 'setting' command
         case undefined:  // Handle undefined (fallback case)
             openSettings();
@@ -47,9 +49,9 @@ register("command", (...args) => {
             args = args.map((w) => w.toLowerCase());
 
             const PARTY_COMMANDS = new Set(["perm"]);
-            const INSTANCES = new Set(["f", "m", "t"]);
-            const STATUS_ARGS = new Set(["ping", "tps", "fps", "cps", "yaw", "pitch", "dir", "direction", "day"]);
-            const STAT_ARGS = new Set(["pet", "stats", "soulflow", "sf", "playtime", "pt", "legion"]);
+            const INSTANCES = new Set(["f"]);
+            const STATUS_ARGS = new Set(["day"]);
+            const STAT_ARGS = new Set([]);
 
             // Check and handle valid commands
             if (PARTY_COMMANDS.has(command) || INSTANCES.has(command[0])) {
