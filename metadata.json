@@ -2,7 +2,7 @@
   "name": "KupaAddons",
   "creator": "Qpcic",
   "description": "Random utilities!",
-  "version": "0.0.2",
+  "version": "0.0.2-alpha",
   "entry": "index.js",
   "requires": ["Vigilance", "PogData"]
 }
