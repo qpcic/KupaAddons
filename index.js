@@ -31,10 +31,10 @@ function helpCmd() {
         
     ${DARK_PURPLE + BOLD}GENERAL:${RESET}
     ${WHITE}/ka ${GRAY}- Main config UI
-    ${WHITE}/ka discord${GRAY}- Discord server link
+    ${WHITE}/ka discord${GRAY} - Discord server link
         
     ${DARK_PURPLE + BOLD}MISC:${RESET}
-    ${WHITE}/ka github${GRAY}- GitHub repo link`
+    ${WHITE}/ka github${GRAY} - GitHub repo link`
 
     );
 }
