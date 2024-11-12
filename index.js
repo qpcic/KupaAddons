@@ -13,10 +13,12 @@ import {
     LOGO, WHITE, DARK_PURPLE, RESET, DARK_GRAY, GITHUB,
 } from "./utils/Constants";
 import {DISCORD} from "./utils/Constants";
-import {updateList} from "./utils/ListUtils";
-import {printList} from "./utils/ListUtils";
-
-const KA = "[KupaAddons]";
+import {helpCmd, helpParty} from "./utils/HelpMenu";
+import "./party/PartyAdd";
+import {partyAdd} from "./party/PartyAdd";
+import {partyShow} from "./party/PartyShow";
+import {partyInv} from "./party/PartyInvite";
+import {partyClear} from "./party/PartyClear";
 
 function openSettings() {
     try {
@@ -24,21 +26,6 @@ function openSettings() {
     } catch (e) {
         ChatLib.chat(`${LOGO} ${RED} Error! /ct reload`);
     }
-}
-
-
-function helpCmd() {
-    ChatLib.chat(
-        `\n${LOGO} ${DARK_GRAY}v${JSON.parse(FileLib.read("KupaAddons", "metadata.json")).version}
-        
-    ${DARK_PURPLE + BOLD}GENERAL:${RESET}
-    ${WHITE}/ka ${GRAY}- Main config UI
-    ${WHITE}/ka discord${GRAY} - Discord server link
-        
-    ${DARK_PURPLE + BOLD}MISC:${RESET}
-    ${WHITE}/ka github${GRAY} - GitHub repo link`
-
-    );
 }
 
 // /ka ...args
@@ -65,10 +52,32 @@ register("command", (...args) => {
         case "help":
             helpCmd();
             break;
-        case "perm":
-        case "permlist":
-        case "pl":
-            updateList(args, "permlist");
+        case "party":
+            helpParty();
+            break;
+        case "padd":
+            if (args.length < 2) {
+                ChatLib.chat(`${LOGO} ${RED}Command failed: wrong syntax!`);
+                break;
+            }
+            else
+            {
+                partyAdd(args[1]);
+                break;
+            }
+        case "pshow":
+        case "pview":
+            partyShow();
+            break;
+        case "pinv":
+        case "inv":
+        case "invite":
+        case "pinvite":
+            partyInv();
+            break;
+        case "pclear":
+            ChatLib.chat(`${LOGO} ${GREEN}Party cleared!`);
+            partyClear();
             break;
         case "github":
             ChatLib.chat(`${LOGO} ${GRAY}GitHub:${WHITE} ${GITHUB}`);
@@ -77,7 +86,7 @@ register("command", (...args) => {
             // Normalize all arguments to lowercase
             args = args.map((w) => w.toLowerCase());
 
-            const PARTY_COMMANDS = new Set(["perm"]);
+            const PARTY_COMMANDS = new Set(["padd, premove, pshow, pview, pclear"]);
             const INSTANCES = new Set(["f"]);
             const STATUS_ARGS = new Set(["day"]);
             const STAT_ARGS = new Set([]);

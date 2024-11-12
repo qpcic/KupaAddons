@@ -23,7 +23,7 @@ export let data = new PogObject(
             "fishing_experience",
         ],
     },
-    "data/datitee.json"
+    "data/kupa.json"
 );
 
 // perm saving when game close

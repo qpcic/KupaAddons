@@ -1,8 +1,6 @@
 import { GREEN, ITALIC, LOGO } from "./Constants";
 import location from "./Location";
 import Settings from "./Settings";
-import { drawBox, renderScale } from "./functions/render";
-
 const gui = new Gui();
 
 const BORDER_COLOR = Renderer.color(128, 128, 128, 128);

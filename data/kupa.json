@@ -1,6 +1,14 @@
 {
     "version": "0.0.2",
-    "permlist": [],
+    "permlist": [
+        "BOR",
+        "Wolf",
+        "Wolf",
+        "Wolf",
+        "boris",
+        "borise",
+        "boriss"
+    ],
     "attributelist": [
         "breeze",
         "dominance",
