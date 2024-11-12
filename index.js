@@ -65,14 +65,15 @@ register("command", (...args) => {
                 partyAdd(args[1]);
                 break;
             }
+            break;
+        case "premove":
+            partyRemove(args[1]);
+            break;
         case "pshow":
         case "pview":
             partyShow();
             break;
-        case "pinv":
         case "inv":
-        case "invite":
-        case "pinvite":
             partyInv();
             break;
         case "pclear":
