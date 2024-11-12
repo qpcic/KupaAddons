@@ -16,6 +16,7 @@ import {DISCORD} from "./utils/Constants";
 import {helpCmd, helpParty} from "./utils/HelpMenu";
 import {partyAdd} from "./party/PartyAdd";
 import {partyShow} from "./party/PartyShow";
+import {partyInv} from "./party/PartyInvite";
 import {partyClear} from "./party/PartyClear";
 
 function openSettings() {
@@ -72,9 +73,9 @@ register("command", (...args) => {
         case "pview":
             partyShow();
             break;
-        /*case "inv":
+        case "inv":
             partyInv();
-            break;*/
+            break;
         case "pclear":
             partyClear();
             break;
@@ -85,24 +86,10 @@ register("command", (...args) => {
             // Normalize all arguments to lowercase
             args = args.map((w) => w.toLowerCase());
 
-            const PARTY_COMMANDS = new Set(["padd, premove, pshow, pview, pclear"]);
-            const INSTANCES = new Set(["f"]);
-            const STATUS_ARGS = new Set(["day"]);
-            const STAT_ARGS = new Set([]);
-
-            // Check and handle valid commands
-            if (PARTY_COMMANDS.has(command) || INSTANCES.has(command[0])) {
-                // Handle party or instance commands
-                // For example: call specific functions for these commands (not defined here)
-            } else if (STATUS_ARGS.has(command)) {
-                getStatus(command);  // Call the function to get status based on the command
-            } else if (STAT_ARGS.has(command)) {
-                getStat(command);  // Call the function to get stats based on the command
-            } else {
                 // Inform user of unknown command
                 ChatLib.chat(`${LOGO + RED} Unknown command: "${command}" was not found!`);
                 ChatLib.chat(`${LOGO + RED} Use '/ka help' for a full list of commands.`);
-            }
+
             break;
     }
 }).setName("ka")  // Set the command name to '/ka'

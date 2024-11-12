@@ -25,7 +25,6 @@ export let data = new PogObject(
     },
     "data/kupa.json"
 );
-
 // perm saving when game close
 register("gameUnload", () => {
     data.save();
