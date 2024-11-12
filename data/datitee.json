@@ -1,0 +1,20 @@
+{
+    "version": "0.0.2",
+    "permlist": [
+        "nejko602"
+    ],
+    "attributelist": [
+        "breeze",
+        "dominance",
+        "fortitude",
+        "lifeline",
+        "magic_find",
+        "mana_pool",
+        "mana_regeneration",
+        "mending",
+        "speed",
+        "veteran",
+        "blazing_fortune",
+        "fishing_experience"
+    ]
+}
