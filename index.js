@@ -18,6 +18,7 @@ import {partyAdd} from "./party/PartyAdd";
 import {partyShow} from "./party/PartyShow";
 import {partyInv} from "./party/PartyInvite";
 import {partyClear} from "./party/PartyClear";
+import {partyRemove} from "./party/PartyRemove";
 
 function openSettings() {
     try {
@@ -65,10 +66,16 @@ register("command", (...args) => {
                 partyAdd(args[1]);
                 break;
             }
-            break;
-        /*case "premove":
-            partyRemove(args[1]);
-            break;*/
+        case "premove":
+            if (args.length < 2) {
+                ChatLib.chat(`${LOGO} ${RED}Command failed: wrong syntax!`);
+                break;
+            }
+            else
+            {
+                partyRemove(args[1]);
+                break;
+            }
         case "pshow":
         case "pview":
             partyShow();

@@ -18,17 +18,21 @@ function printRemoved(player, result) {
     }
 }
 
-export function partyRemove (args) {
+export function partyRemove(args) {
     const newPlayer = args.toString().toLowerCase();
+
     if (list.includes(newPlayer)) {
         let indexForRemoval = list.indexOf(newPlayer);
-        printRemoved(newPlayer, true)
-        list = list.splice(indexForRemoval, 1);
+
+        // Remove the item directly without reassigning `list`
+        list.splice(indexForRemoval, 1);
+
+        printRemoved(newPlayer, true);
+
+        // Update `data.permlist` after modifying `list`
         data.permlist = list;
         data.save();
-    }
-    else
-    {
+    } else {
         printRemoved(newPlayer, false);
     }
 }

@@ -12,7 +12,7 @@ export function helpCmd() {
     ${WHITE}/ka party${GRAY}- Displays available Party commands
         
     ${DARK_PURPLE + BOLD}MISC:${RESET}
-    ${WHITE}/ka github${GRAY} - GitHub repo link\n`
+    ${WHITE}/ka github${GRAY} - GitHub repo link`
     );
 }
 
@@ -29,6 +29,6 @@ export function helpParty() {
     ${WHITE}/ka pclear${GRAY} - Clears all entries
     
     ${WHITE}/ka inv${GRAY} - Invites every added player
-     `
+    `
     );
 }
