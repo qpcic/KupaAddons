@@ -15,7 +15,6 @@ import Settings from "../utils/Settings";
 import {data} from "../utils/Data";
 
 const list = data.permlist;
-const isArray = Array.isArray(list);
 
 function printRemoved(player, result) {
     if (result === true) {
@@ -27,7 +26,7 @@ function printRemoved(player, result) {
     }
 }
 
-export function partyAdd (args) {
+export function partyRemove (args) {
     const newPlayer = args.toString().toLowerCase();
 
     if (list.includes(newPlayer)) {

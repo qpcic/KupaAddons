@@ -19,6 +19,7 @@ import {partyAdd} from "./party/PartyAdd";
 import {partyShow} from "./party/PartyShow";
 import {partyInv} from "./party/PartyInvite";
 import {partyClear} from "./party/PartyClear";
+import {partyRemove} from "./party/PartyRemove"
 
 function openSettings() {
     try {
