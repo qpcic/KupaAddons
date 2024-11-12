@@ -10,8 +10,9 @@ import {
     HEADER,
     ITALIC,
     RED,
-    LOGO,
+    LOGO, WHITE, DARK_PURPLE, RESET, DARK_GRAY, GITHUB,
 } from "./utils/Constants";
+import {DISCORD} from "./utils/Constants";
 
 const KA = "[KupaAddons]";
 
@@ -21,6 +22,21 @@ function openSettings() {
     } catch (e) {
         ChatLib.chat(`${LOGO} ${RED} Error! /ct reload`);
     }
+}
+
+
+function helpCmd() {
+    ChatLib.chat(
+        `\n${LOGO} ${DARK_GRAY}v${JSON.parse(FileLib.read("KupaAddons", "metadata.json")).version}
+        
+    ${DARK_PURPLE + BOLD}GENERAL:${RESET}
+    ${WHITE}/ka ${GRAY}- Main config UI
+    ${WHITE}/ka discord${GRAY}- Discord server link
+        
+    ${DARK_PURPLE + BOLD}MISC:${RESET}
+    ${WHITE}/ka github${GRAY}- GitHub repo link`
+
+    );
 }
 
 // /ka ...args
@@ -38,12 +54,18 @@ register("command", (...args) => {
     // Switch logic based on the command
     switch (soleCommand) {
         case "discord":
-            ChatLib.chat(`${LOGO} +`)
+            ChatLib.chat(`${LOGO} ${GRAY}Discord:${WHITE} ${DISCORD}`)
+            break;
         case "setting":  // Handle 'setting' command
         case undefined:  // Handle undefined (fallback case)
             openSettings();
             break;
-
+        case "help":
+            helpCmd();
+            break;
+        case "github":
+            ChatLib.chat(`${LOGO} ${GRAY}GitHub:${WHITE} ${GITHUB}`);
+            break;
         default:
             // Normalize all arguments to lowercase
             args = args.map((w) => w.toLowerCase());

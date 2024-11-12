@@ -26,5 +26,8 @@ export const RESET = "§r";
 
 export const HLOGO = `${LIGHT_PURPLE}${BOLD}KupaAddons`;
 export const LOGO = `${WHITE}[${LIGHT_PURPLE}KupaAddons${WHITE}]`;
-export const VERS = `${DARK_PURPLE + ITALIC}${JSON.parse(FileLib.read("KupaAddons", "metadata.json")).version} ${GRAY + ITALIC}by Qpcic`;
+export const VERS = `${YELLOW + ITALIC}${JSON.parse(FileLib.read("KupaAddons", "metadata.json")).version} ${GRAY + ITALIC}by Qpcic`;
 export const HEADER = `${WHITE}-=[ ${HLOGO} ${WHITE}]=-`;
+
+export const DISCORD = "https://discord.gg/xTpTBz7fH4";
+export const GITHUB = "https://github.com/qpcic/KupaAddons";

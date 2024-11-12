@@ -127,7 +127,7 @@
 		item_cooldown_alert = false
 
 	[general.basics]
-		kupaaddons_toggle = true
+		kupaaddons_toggle = false
 
 	[general.webhook]
 		discord_webhook = ""
