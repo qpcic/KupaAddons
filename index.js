@@ -13,6 +13,7 @@ import {
     LOGO, WHITE, DARK_PURPLE, RESET, DARK_GRAY, GITHUB,
 } from "./utils/Constants";
 import {DISCORD} from "./utils/Constants";
+import {updateList} from "./utils/ListUtils";
 
 const KA = "[KupaAddons]";
 
@@ -62,6 +63,11 @@ register("command", (...args) => {
             break;
         case "help":
             helpCmd();
+            break;
+        case "perm":
+        case "permlist":
+        case "pl":
+            updateList(args, "permlist");
             break;
         case "github":
             ChatLib.chat(`${LOGO} ${GRAY}GitHub:${WHITE} ${GITHUB}`);

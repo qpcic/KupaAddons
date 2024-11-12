@@ -144,7 +144,7 @@ export function updateList(args, listName) {
             break;
         case "view": // DISPLAY LIST
         case "list":
-            printList(list, listName, parseInt(args[2] ?? 1));
+            printList(list, listName, true);
             return;
         case "reset": // RESET LIST TO DEFAULT
             if (listName === "dianalist") data.dianalist = ["hub", "da", "castle", "museum", "wizard"];
@@ -241,7 +241,7 @@ ${DARK_AQUA}Special args (put in front, e.x 'a60'):
             return;
     }
 
-    ChatLib.command(`va ${listName} list`, true);
+    ChatLib.command(`ka ${listName} list`, true);
 
     if (listName === "moblist" || listName === "colorlist") updateEntityList();
     else if (listName === "dianalist") setWarps();
@@ -284,7 +284,7 @@ export function soulEdit(args, type, soul, base, world) {
             break;
         default:
             ChatLib.chat(`\n${LOGO + RED}Error: Invalid argument "${args[1]}"!`);
-            ChatLib.chat(`${LOGO + RED}Please input as: ${WHITE}/va ${type} ${GRAY}<${WHITE}reset, clear, pop${GRAY}>`);
+            ChatLib.chat(`${LOGO + RED}Please input as: ${WHITE}/ka ${type} ${GRAY}<${WHITE}reset, clear, pop${GRAY}>`);
             break;
     }
 }
