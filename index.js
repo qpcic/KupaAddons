@@ -14,12 +14,9 @@ import {
 } from "./utils/Constants";
 import {DISCORD} from "./utils/Constants";
 import {helpCmd, helpParty} from "./utils/HelpMenu";
-import "./party/PartyAdd";
 import {partyAdd} from "./party/PartyAdd";
 import {partyShow} from "./party/PartyShow";
-import {partyInv} from "./party/PartyInvite";
 import {partyClear} from "./party/PartyClear";
-import {partyRemove} from "./party/PartyRemove"
 
 function openSettings() {
     try {
@@ -54,6 +51,7 @@ register("command", (...args) => {
             helpCmd();
             break;
         case "party":
+        case "p":
             helpParty();
             break;
         case "padd":
@@ -67,18 +65,17 @@ register("command", (...args) => {
                 break;
             }
             break;
-        case "premove":
+        /*case "premove":
             partyRemove(args[1]);
-            break;
+            break;*/
         case "pshow":
         case "pview":
             partyShow();
             break;
-        case "inv":
+        /*case "inv":
             partyInv();
-            break;
+            break;*/
         case "pclear":
-            ChatLib.chat(`${LOGO} ${GREEN}Party cleared!`);
             partyClear();
             break;
         case "github":

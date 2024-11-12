@@ -1,21 +1,13 @@
 import {
-    BOLD,
-    DARK_GRAY,
-    DARK_PURPLE,
     RED,
-    GRAY,
     LOGO,
-    RESET,
     WHITE,
-    GITHUB,
     GREEN,
     LIGHT_PURPLE
 } from "../utils/Constants";
-import Settings from "../utils/Settings";
 import {data} from "../utils/Data";
 
-const list = data.permlist;
-
+let list = data.permlist;
 function printRemoved(player, result) {
     if (result === true) {
         ChatLib.chat(`${LOGO} ${GREEN}Player ${LIGHT_PURPLE}${player + GREEN} removed successfully!`);
@@ -28,16 +20,15 @@ function printRemoved(player, result) {
 
 export function partyRemove (args) {
     const newPlayer = args.toString().toLowerCase();
-
     if (list.includes(newPlayer)) {
         let indexForRemoval = list.indexOf(newPlayer);
         printRemoved(newPlayer, true)
-        list.splice(indexForRemoval, 1);
+        list = list.splice(indexForRemoval, 1);
         data.permlist = list;
         data.save();
     }
     else
     {
-        printRemoved(newPlayer, false)
+        printRemoved(newPlayer, false);
     }
 }
