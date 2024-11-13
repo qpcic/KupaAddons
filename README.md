@@ -6,8 +6,5 @@
     </br>
 ## General-use Skyblock ChatTriggers module
 ### Features
-#### Crimson Isle Crafting _(planned)_
-- Nether Items Crafting Helper _(planned)_
-- Godrolls Crafted Tracker _(planned)_
 #### Party
 - Perm List Saver (Bulk Inviting pre-saved players)
