@@ -78,9 +78,11 @@ register("command", (...args) => {
             }
         case "pshow":
         case "pview":
+        case "plist":
             partyShow();
             break;
         case "inv":
+        case "pinv":
             partyInv();
             break;
         case "pclear":

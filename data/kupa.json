@@ -1,6 +1,8 @@
 {
     "version": "0.0.2",
-    "permlist": [],
+    "permlist": [
+        "agrudil"
+    ],
     "attributelist": [
         "breeze",
         "dominance",
